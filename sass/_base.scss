@@ -1,0 +1,72 @@
+/** @format */
+
+$bp-huge: 93.75em; // 1500px
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 28.75em; // 460px
+
+// /////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+// /////////////////////////////////////////////////////
+
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit;
+}
+
+:root {
+  transition: all 0.3s;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% --> 1rem = 10px
+  scroll-behavior: smooth;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 56.25%;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 43.75%;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 37.5%;
+  }
+}
+
+body {
+  font-weight: 400;
+  line-height: 1.6;
+
+  // font-family: "Roboto", sans-serif;
+  color: #f5f5f5;
+  font-family: "Courier New", Courier, monospace;
+
+  background-image: url(../img/blob.svg);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+}
