@@ -57,10 +57,18 @@ body {
   font-family: "Courier New", Courier, monospace;
 
   background-image: url(../img/blob.svg);
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @media only screen and (max-width: $bp-small) {
+    background-image: url(../img/blob-small.svg);
+    background-position: top;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    background-position: right;
+  }
 
   display: flex;
   flex-direction: column;

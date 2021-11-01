@@ -43,6 +43,13 @@ body {
   align-items: center;
   width: 100%;
   height: 100vh; }
+  @media only screen and (max-width: 37.5em) {
+    body {
+      background-image: url(../img/blob-small.svg);
+      background-position: top; } }
+  @media only screen and (max-width: 50em) {
+    body {
+      background-position: right; } }
 
 /** @format */
 .heading {
