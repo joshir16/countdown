@@ -3,7 +3,8 @@
 "use strict";
 
 const countdown = () => {
-  const countDate = new Date("January 1, 2022 00:00:00").getTime();
+  const countDate = new Date("November 25, 2021 00:00:00").getTime();
+
   //-----------------
   const now = new Date().getTime();
   const gap = countDate - now;
