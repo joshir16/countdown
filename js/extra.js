@@ -2,27 +2,40 @@
 
 // "use strict";
 
-// const birthDay = [
-//   {
-//     name: "Kritika",
-//     dob: new Date("November 25, 2021 00:00:00").getTime(),
-//   },
-//   {
-//     name: "Vineeta",
-//     dob: new Date("November 30, 2021 00:00:00").getTime(),
-//   },
-// ];
+const birthDay = [
+  {
+    name: "Kritika",
+    date: 25,
+    month: "November",
+  },
+  {
+    name: "Vineeta",
+    date: 30,
+    month: "November",
+  },
+  {
+    name: "Rishabh",
+    date: 16,
+    month: "December",
+  },
+];
 
-// console.log(birthDay[0]);
-// console.log(birthDay[1]);
+// /////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////
 
-// // const nextBirthDay = birthDay[0];
-// // console.log(nextBirthDay);
+let currentYear = new Date().getFullYear();
 
-// // const { name, dob } = nextBirthDay;
-// // console.log(name, dob);
+let name;
+let date;
+let month;
 
-// birthDay.forEach((person) => {
-//   const { name } = person;
-//   const { dob } = person;
-// });
+let gap;
+
+const [obj1] = birthDay;
+({ name, date, month } = obj1);
+
+const nextBirthDay = new Date(`${month} ${date}, ${currentYear} 00:00:00`);
+
+console.log(name, nextBirthDay);
+
+// ---------------------------------------------------------------
