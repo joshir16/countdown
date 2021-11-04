@@ -20,7 +20,7 @@ const allBirthDays = [
   },
   {
     name: "Isu",
-    date: 4,
+    date: 13,
     month: "November",
   },
   {
@@ -74,7 +74,7 @@ const countdown = () => {
   let { name, date, month } = obj;
 
   let nextDate = new Date(
-    `${month} ${date}, ${currentYear} 16:40:00`
+    `${month} ${date}, ${currentYear} 00:00:00`
   ).getTime();
   const now = new Date().getTime();
 
