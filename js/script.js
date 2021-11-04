@@ -74,7 +74,7 @@ const countdown = () => {
   let { name, date, month } = obj;
 
   let nextDate = new Date(
-    `${month} ${date}, ${currentYear} 16:38:00`
+    `${month} ${date}, ${currentYear} 16:40:00`
   ).getTime();
   const now = new Date().getTime();
 
