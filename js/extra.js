@@ -35,7 +35,7 @@ const allBirthDays = [
   },
   {
     name: "Manjusha",
-    date: 08,
+    date: 8,
     month: "December",
   },
   {
@@ -69,6 +69,7 @@ const countdown = () => {
 
   const gap = nextDate - now;
 
+  ///////////////////////////////////////////////////////////////////////////
   if (gap < 0) {
     if (i === allBirthDays.length - 1) {
       i = 0;
@@ -80,20 +81,20 @@ const countdown = () => {
     }
   }
 
-  /////////////////////////////////////////////////////////////////////////
-  //=======================================================================
+  ///////////////////////////////////////////////////////////////////////////
+  //=========================================================================
   const second = 1000;
   const minute = second * 60;
   const hour = minute * 60;
   const day = hour * 24;
 
-  // -----------------
+  //-------------------------------------------------------------------------
   const textDay = Math.floor(gap / day);
   const textHour = Math.floor((gap % day) / hour);
   const textMin = Math.floor((gap % hour) / minute);
   const textSec = Math.floor((gap % minute) / second);
 
-  // ----------------------------------------------------------------------
+  //-------------------------------------------------------------------------
 
   document.querySelector(".heading").innerText = `${name}'s birthday countdown`;
   document.querySelector(".timer__days").innerText = textDay;
