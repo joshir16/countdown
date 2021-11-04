@@ -2,12 +2,25 @@
 
 // "use strict";
 
-// const currentYear = new Date().getFullYear();
-
 const allBirthDays = [
   {
+    name: "Shubham",
+    date: 12,
+    month: "October",
+  },
+  {
+    name: "Abhi",
+    date: 18,
+    month: "October",
+  },
+  {
+    name: "Sumi and Aman",
+    date: 29,
+    month: "October",
+  },
+  {
     name: "Isu",
-    date: 04,
+    date: 13,
     month: "November",
   },
   {
@@ -38,24 +51,35 @@ const allBirthDays = [
 ];
 
 // /////////////////////////////////////////////////////////////
+let i = 0;
+
+let currentYear = new Date().getFullYear();
 
 // /////////////////////////////////////////////////////////////
-let i = 0;
 
 const countdown = () => {
   let obj = allBirthDays[i];
 
   let { name, date, month } = obj;
 
-  let nextDate = new Date(`${month} ${date}, 2021 12:00:00`).getTime();
+  let nextDate = new Date(
+    `${month} ${date}, ${currentYear} 00:00:00`
+  ).getTime();
   const now = new Date().getTime();
 
   const gap = nextDate - now;
 
   if (gap < 0) {
-    i++;
-    return;
+    if (i === allBirthDays.length - 1) {
+      i = 0;
+      currentYear++;
+      return;
+    } else {
+      i++;
+      return;
+    }
   }
+
   /////////////////////////////////////////////////////////////////////////
   //=======================================================================
   const second = 1000;
@@ -69,7 +93,7 @@ const countdown = () => {
   const textMin = Math.floor((gap % hour) / minute);
   const textSec = Math.floor((gap % minute) / second);
 
-  // -----------------------------------------------------
+  // ----------------------------------------------------------------------
 
   document.querySelector(".heading").innerText = `${name}'s birthday countdown`;
   document.querySelector(".timer__days").innerText = textDay;
