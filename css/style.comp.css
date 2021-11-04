@@ -97,7 +97,7 @@ body {
   position: absolute;
   width: 60%;
   height: 80rem;
-  background-image: url(/img/card-waves.svg);
+  background-image: url(../img/card-waves.svg);
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
