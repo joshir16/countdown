@@ -76,6 +76,7 @@ const countdown = () => {
   let nextDate = new Date(
     `${month} ${date}, ${currentYear} 00:00:00`
   ).getTime();
+
   const now = new Date().getTime();
 
   const gap = nextDate - now;
